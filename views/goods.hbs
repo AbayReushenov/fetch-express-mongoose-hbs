@@ -1,0 +1,26 @@
+<div>
+  <form id="addgood">
+    <input type="text" name="name" placeholder="Название товара">
+    <input type="number" name="price" placeholder="Цена">
+    <input type="text" name="currency" placeholder="Валюта">
+    <input type="number" name="count" placeholder="Количество">
+    <button>Добавить</button>
+  </form>
+</div>
+
+<div id="errormessage"></div>
+
+<div>
+  <ul id="goodslist">
+    {{#each goods}}
+    <li data-goodid="{{this._id}}">
+      <p>Название товара: {{this.name}}</p>
+      <p>Цена: {{this.price}}</p>
+      <p>Валюта: {{this.currency}}</p>
+      <p>Количество: {{this.count}}</p>
+      <button class="edit">Редактировать</button>
+      <button class="delete">Удалить</button>
+    </li>
+    {{/each}}
+  </ul>
+</div>
